@@ -2,23 +2,23 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
-Web developer
+alt = Julio Nicacio
+Julio Nicacio
+Game Developer
 
 Show Contacts
 
 Email
-richard@example.com
+julio.nicacio99@gmail.com
 
 Phone
-+1 (213) 352-2795
++55 (27) 99834-2363
 
 Birthday
-June 23, 1982
+September 09, 1999
 
 Location
-Sacramento, California, USA
+São José dos Campos, São Paulo, Brazil
 
 # navbar
 
