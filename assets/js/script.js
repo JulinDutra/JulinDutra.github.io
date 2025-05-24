@@ -141,21 +141,19 @@ const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
-navigationLinks.forEach(navLink => {
-  navLink.addEventListener("click", function () {
-    const target = navLink.dataset.pageTarget;
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
 
-    pages.forEach(page => {
-      if (page.dataset.page === target) {
-        page.classList.add("active");
+    for (let i = 0; i < pages.length; i++) {
+      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        pages[i].classList.add("active");
+        navigationLinks[i].classList.add("active");
+        window.scrollTo(0, 0);
       } else {
-        page.classList.remove("active");
+        pages[i].classList.remove("active");
+        navigationLinks[i].classList.remove("active");
       }
-    });
+    }
 
-    navigationLinks.forEach(link => link.classList.remove("active"));
-    navLink.classList.add("active");
-
-    window.scrollTo(0, 0);
   });
-});
+}
