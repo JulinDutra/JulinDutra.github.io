@@ -1872,4 +1872,25 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+  .platform-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-top: 5px;
+}
+
+.platform-tags img {
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(1.2);
+  transition: filter 0.3s ease;
+}
+
+.platform-tags img:hover {
+  filter: none;
+}
+
+
 }
