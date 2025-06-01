@@ -2100,9 +2100,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   background: rgba(0, 0, 0, 0.4);
   border: none;
   color: var(--orange-yellow-crayola);
-  width: 38px;
-  height: 38px;
-  font-size: 20px;
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 50%;
@@ -2110,10 +2110,14 @@ textarea.form-input::-webkit-resizer { display: none; }
   box-shadow: 0 0 6px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
   z-index: 20;
+  display: flex; /* <-- ESSENCIAL */
+  align-items: center;
+  justify-content: center;
 }
 
+
 .carousel-btn ion-icon {
-  font-size: 22px;
+  font-size: 20px;
   color: var(--orange-yellow-crayola);
   display: flex;
   align-items: center;
