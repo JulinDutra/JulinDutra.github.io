@@ -74,8 +74,6 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 }
 
-
-
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
@@ -165,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.body.addEventListener('click', function (event) {
   const clicked = event.target;
 
-  if (clicked.tagName === 'IMG' && (clicked.closest('.image-gallery') || clicked.closest('.carousel-track')) {
+  if (clicked.tagName === 'IMG' && (clicked.closest('.image-gallery') || clicked.closest('.carousel-track'))) {
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-image');
 
