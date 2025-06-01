@@ -2032,23 +2032,24 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .image-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
   margin: 32px auto;
-  max-width: 960px;
-  padding: 0 16px;
+  max-width: 90%;
+  justify-items: center;
 }
 
 .image-gallery img {
   width: 100%;
-  border-radius: 12px;
-  border: 2px solid var(--orange-yellow-crayola);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 280px;
+  height: auto;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
 .image-gallery img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 12px hsla(45, 100%, 72%, 0.25);
+  transform: scale(1.05);
 }
 
 .image-inline {
@@ -2122,11 +2123,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .carousel-btn.prev {
-  left: -32px;
+  left: -55px;
 }
 
 .carousel-btn.next {
-  right: -32px;
+  right: -55px;
 }
 
 .carousel-btn ion-icon {
