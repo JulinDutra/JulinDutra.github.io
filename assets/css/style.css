@@ -2112,6 +2112,16 @@ textarea.form-input::-webkit-resizer { display: none; }
   z-index: 20;
 }
 
+.carousel-btn ion-icon {
+  font-size: 22px;
+  color: var(--orange-yellow-crayola);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 .carousel-btn.prev {
   left: -16px;
 }
