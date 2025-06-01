@@ -2110,11 +2110,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   box-shadow: 0 0 6px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
   z-index: 20;
-  display: flex; /* <-- ESSENCIAL */
+  display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .carousel-btn ion-icon {
   font-size: 20px;
@@ -2127,16 +2126,24 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .carousel-btn.prev {
-  left: -16px;
+  left: -32px;
 }
 
 .carousel-btn.next {
-  right: -16px;
+  right: -32px;
 }
 
 .carousel-btn:hover {
   background: rgba(0, 0, 0, 0.6);
   transform: translateY(-50%) scale(1.05);
+}
+
+.centered-content {
+  max-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  justify-content: center;
 }
 
 }
