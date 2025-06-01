@@ -1991,7 +1991,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-weight: var(--fw-500);
   color: var(--orange-yellow-crayola);
   margin-bottom: 10px;
-  position: relative;
+  text-align: center;
 }
 
 .info-title::after {
