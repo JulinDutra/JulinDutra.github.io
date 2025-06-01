@@ -171,12 +171,12 @@ const modal = document.getElementById("image-modal");
 const modalImgView = document.getElementById("modal-image");
 const closeBtn = document.querySelector(".close-modal");
 
-document.querySelectorAll(".carousel-track img").forEach(img => {
-  img.addEventListener("click", () => {
-    modal.classList.remove("hidden");
-    modalImgView.src = img.src;
-    modalImgView.alt = img.alt;
-  });
+document.body.addEventListener('click', function (e) {
+  if (e.target.matches('.carousel-track img')) {
+    modal.classList.remove('hidden');
+    modalImg.src = e.target.src;
+    modalImg.alt = e.target.alt;
+  }
 });
 
 closeBtn.addEventListener("click", () => {
