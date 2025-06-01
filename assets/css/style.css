@@ -1893,7 +1893,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .platform-tags {
+  display: flex;
   padding: 10px 16px;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
   border: 1px solid var(--orange-yellow-crayola);
   border-radius: 12px;
   background-color: hsla(45, 100%, 72%, 0.05);
@@ -1970,9 +1974,15 @@ textarea.form-input::-webkit-resizer { display: none; }
   content: none !important;
 }
 
-.info-block {
-  text-align: center;
-  margin-top: 30px;
+.info-block p {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-400);
+  color: var(--white-2);
+  line-height: 1.6;
+  margin-top: 10px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .info-title {
