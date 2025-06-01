@@ -167,17 +167,22 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-document.querySelectorAll('.carousel-track img').forEach(img => {
-  img.addEventListener('click', function () {
-    const modal = document.getElementById('image-modal');
-    const modalImg = document.getElementById('modal-image');
-    modalImg.src = this.src;
-    modal.style.display = "flex";
+const modal = document.getElementById("image-modal");
+const modalImgView = document.getElementById("modal-image");
+const closeBtn = document.querySelector(".close-modal");
+
+document.querySelectorAll(".carousel-track img").forEach(img => {
+  img.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+    modalImgView.src = img.src;
+    modalImgView.alt = img.alt;
   });
 });
 
-document.querySelector('.close-modal').addEventListener('click', function () {
-  document.getElementById('image-modal').style.display = "none";
+closeBtn.addEventListener("click", () => {
+  modal.classList.add("hidden");
 });
 
-
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) modal.classList.add("hidden");
+});
