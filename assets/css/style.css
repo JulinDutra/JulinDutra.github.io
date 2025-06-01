@@ -2075,21 +2075,30 @@ textarea.form-input::-webkit-resizer { display: none; }
   width: 560px;
   height: 315px;
   margin: 40px auto;
-  overflow: visible; 
-  border-radius: 12px;
+  overflow: visible; /* permite os botões saírem */
 }
 
+/* apenas a parte das imagens é escondida */
+.carousel-viewport {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 2px solid #F1D16C;
+  border-radius: 10px;
+}
+
+/* faixa de imagens */
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel-track img {
-  width: 560px;
-  height: 315px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 12px;
-  border: 2px solid var(--orange-yellow-crayola);
   flex-shrink: 0;
 }
 
@@ -2097,40 +2106,30 @@ textarea.form-input::-webkit-resizer { display: none; }
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.4);
+  background-color: rgba(241, 209, 108, 0.8);
   border: none;
-  color: var(--orange-yellow-crayola);
-  width: 42px;
-  height: 42px;
-  font-size: 22px;
-  font-weight: bold;
-  cursor: pointer;
   border-radius: 50%;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 0 6px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-  z-index: 20;
+  padding: 10px;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.carousel-btn ion-icon {
-  font-size: 20px;
-  color: var(--orange-yellow-crayola);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
 }
 
 .carousel-btn.prev {
-  left: -32px;
+  left: -26px;
 }
 
 .carousel-btn.next {
-  right: -32px;
+  right: -26px;
+}
+
+.carousel-btn ion-icon {
+  font-size: 22px;
+  color: black;
 }
 
 .carousel-btn:hover {
