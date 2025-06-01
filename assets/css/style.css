@@ -1876,18 +1876,41 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 * PROJECT'S PORTFOLIO
 	 */
 
-  .platform-tags {
+  .platform-wrapper {
   display: flex;
+  align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  align-items: center;
   margin-bottom: 20px;
-  padding-top: 10px;
+}
+
+.platform-title {
+  color: var(--white-2);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-500);
+  margin: 0;
+}
+
+.platform-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 2px;
+}
+
+.platform-link {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.platform-link:hover {
+  transform: scale(1.1);
 }
 
 .platform-icon {
-  width: 32px;
-  height: 32px;
+  width: 28px !important;
+  height: 28px !important;
   object-fit: contain;
   filter: grayscale(100%) brightness(1.2);
   transition: filter 0.3s ease;
@@ -1895,7 +1918,4 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .platform-icon:hover {
   filter: none;
-}
-
-
 }
