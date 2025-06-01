@@ -2072,11 +2072,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .carousel-container {
   position: relative;
-  max-width: 90%;
+  width: 560px;
+  height: 315px;
   margin: 40px auto;
   overflow: hidden;
-  height: 320px;
-  text-align: center;
   border-radius: 12px;
 }
 
@@ -2086,9 +2085,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .carousel-track img {
-  height: 320px;
-  width: 100%;
-  object-fit: cover; 
+  width: 560px;
+  height: 315px;
+  object-fit: cover;
   border-radius: 12px;
   border: 2px solid var(--orange-yellow-crayola);
   flex-shrink: 0;
@@ -2101,42 +2100,24 @@ textarea.form-input::-webkit-resizer { display: none; }
   background: rgba(0, 0, 0, 0.4);
   border: none;
   color: var(--orange-yellow-crayola);
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 50%;
   backdrop-filter: blur(4px);
   box-shadow: 0 0 6px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
-}
-
-.carousel-btn:hover {
-  background: rgba(0, 0, 0, 0.6);
-  transform: translateY(-50%) scale(1.05);
+  z-index: 20;
 }
 
 .carousel-btn.prev {
-  left: 12px;
+  left: -50px;
 }
 
 .carousel-btn.next {
-  right: 12px;
+  right: -50px;
 }
-
-.carousel-btn:hover {
-  background: hsla(45, 100%, 72%, 0.2);
-}
-
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
-}
-
-
 
 }
