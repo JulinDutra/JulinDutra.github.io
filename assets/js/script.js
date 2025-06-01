@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.body.addEventListener('click', function (event) {
   const clicked = event.target;
 
-  if (clicked.tagName === 'IMG' && clicked.closest('.carousel-track')) {
+  if (clicked.tagName === 'IMG' && (clicked.closest('.image-gallery') || clicked.closest('.carousel-track')) {
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-image');
 
