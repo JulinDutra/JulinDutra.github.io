@@ -1919,3 +1919,17 @@ textarea.form-input::-webkit-resizer { display: none; }
 .platform-icon:hover {
   filter: none;
 }
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--primary);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.back-button:hover {
+  opacity: 0.8;
+}
+
+}

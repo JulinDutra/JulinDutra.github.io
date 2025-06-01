@@ -116,3 +116,21 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const project = params.get("project");
+
+  if (project) {
+    for (let i = 0; i < pages.length; i++) {
+      const isTarget = pages[i].dataset.page.toLowerCase() === project.toLowerCase();
+      pages[i].classList.toggle("active", isTarget);
+    }
+
+    for (let i = 0; i < navigationLinks.length; i++) {
+      navigationLinks[i].classList.remove("active");
+    }
+
+    window.scrollTo(0, 0);
+  }
+});
