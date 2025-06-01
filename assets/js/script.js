@@ -167,3 +167,17 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+document.querySelectorAll('.carousel-track img').forEach(img => {
+  img.addEventListener('click', function () {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-image');
+    modalImg.src = this.src;
+    modal.style.display = "flex";
+  });
+});
+
+document.querySelector('.close-modal').addEventListener('click', function () {
+  document.getElementById('image-modal').style.display = "none";
+});
+
+
