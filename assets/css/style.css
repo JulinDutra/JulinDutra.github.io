@@ -1878,25 +1878,26 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .platform-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
 .platform-title {
-  color: var(--white-2);
   font-size: var(--fs-4);
   font-weight: var(--fw-500);
-  margin: 0;
+  color: var(--white-2);
+  margin-bottom: 8px;
+  text-align: center;
 }
 
 .platform-tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  align-items: center;
-  padding-top: 2px;
+  padding: 10px 16px;
+  border: 1px solid var(--orange-yellow-crayola);
+  border-radius: 12px;
+  background-color: hsla(45, 100%, 72%, 0.05);
+  box-shadow: 0 0 6px hsla(45, 100%, 72%, 0.15);
 }
 
 .platform-link {
@@ -1909,15 +1910,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .platform-icon {
-  width: 28px !important;
-  height: 28px !important;
-  object-fit: contain;
-  filter: grayscale(100%) brightness(1.2);
-  transition: filter 0.3s ease;
+  width: 28px;
+  height: 28px;
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .platform-icon:hover {
-  filter: none;
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 .back-button {
@@ -1968,5 +1969,48 @@ textarea.form-input::-webkit-resizer { display: none; }
 .project-name::after {
   content: none !important;
 }
+
+.info-block {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.info-title {
+  font-size: var(--fs-4);
+  font-weight: var(--fw-500);
+  color: var(--orange-yellow-crayola);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.info-title::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: var(--orange-yellow-crayola);
+  margin: 6px auto 0;
+  border-radius: 2px;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  color: var(--white-2);
+  margin-top: 10px;
+}
+
+.tech-list li {
+  background: hsla(45, 100%, 72%, 0.07);
+  border: 1px solid var(--orange-yellow-crayola);
+  border-radius: 12px;
+  padding: 6px 12px;
+  backdrop-filter: blur(3px);
+}
+
 
 }
