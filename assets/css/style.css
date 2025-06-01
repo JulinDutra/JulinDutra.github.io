@@ -2024,8 +2024,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   border: 1px solid var(--orange-yellow-crayola);
   border-radius: 12px;
   padding: 6px 12px;
+  color: var(--white-2);
   backdrop-filter: blur(3px);
+  font-size: var(--fs-6);
 }
-
 
 }
