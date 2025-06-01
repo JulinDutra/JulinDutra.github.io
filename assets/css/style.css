@@ -2075,7 +2075,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   width: 560px;
   height: 315px;
   margin: 40px auto;
-  overflow: visible; 
+  overflow: hidden; 
+  text-align: center;
 }
 
 .carousel-viewport {
@@ -2088,16 +2089,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.3s ease-in-out;
-  width: 100%;
-  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
 .carousel-track img {
+  flex: 0 0 100%;
   width: 100%;
-  height: 100%;
   object-fit: cover;
-  flex-shrink: 0;
+  height: 100%;
 }
 
 .carousel-btn {
@@ -2115,14 +2115,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .carousel-btn:hover {
-  transform: scale(1.1);
-  background-color: rgba(255, 239, 173, 0.95);
+  background-color: rgba(255, 239, 173, 1);
 }
-
 
 .carousel-btn.prev {
   left: -26px;
@@ -2163,7 +2160,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   max-width: 90%;
   max-height: 90%;
   border-radius: 10px;
-  box-shadow: var(--shadow-3);
 }
 
 .image-modal.hidden {

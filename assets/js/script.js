@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const updateCarousel = () => {
       const width = carousel.offsetWidth;
-      track.style.transform = `translateX(-${width * currentIndex}px)`;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
     };
 
     window.addEventListener('resize', updateCarousel);
@@ -167,22 +167,25 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-const modal = document.getElementById("image-modal");
-const modalImgView = document.getElementById("modal-image");
-const closeBtn = document.querySelector(".close-modal");
+document.body.addEventListener('click', function (event) {
+  const clicked = event.target;
 
-document.body.addEventListener('click', function (e) {
-  if (e.target.matches('.carousel-track img')) {
-    modal.classList.remove('hidden');
-    modalImg.src = e.target.src;
-    modalImg.alt = e.target.alt;
+  if (clicked.tagName === 'IMG' && clicked.closest('.carousel-track')) {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-image');
+
+    if (modal && modalImg) {
+      modalImg.src = clicked.src;
+      modalImg.alt = clicked.alt || '';
+      modal.classList.remove('hidden');
+    }
   }
-});
 
-closeBtn.addEventListener("click", () => {
-  modal.classList.add("hidden");
-});
+  if (clicked.classList.contains('close-modal')) {
+    document.getElementById('image-modal').classList.add('hidden');
+  }
 
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) modal.classList.add("hidden");
+  if (clicked.id === 'image-modal') {
+    clicked.classList.add('hidden');
+  }
 });
