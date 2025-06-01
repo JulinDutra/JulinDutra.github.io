@@ -1932,4 +1932,25 @@ textarea.form-input::-webkit-resizer { display: none; }
   opacity: 0.8;
 }
 
+.project-name {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--orange-yellow-crayola);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.project-name::after {
+  content: "";
+  display: block;
+  margin: 8px auto 0;
+  width: 40px;
+  height: 3px;
+  background: var(--text-gradient-yellow);
+  border-radius: 3px;
+}
+
+
 }
