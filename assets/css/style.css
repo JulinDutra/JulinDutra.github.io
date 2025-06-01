@@ -2075,7 +2075,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   width: 560px;
   height: 315px;
   margin: 40px auto;
-  overflow: hidden; 
+  overflow: visible; 
   text-align: center;
 }
 
@@ -2122,11 +2122,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .carousel-btn.prev {
-  left: -26px;
+  left: -32px;
 }
 
 .carousel-btn.next {
-  right: -26px;
+  right: -32px;
 }
 
 .carousel-btn ion-icon {
