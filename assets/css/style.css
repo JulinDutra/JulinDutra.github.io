@@ -2075,7 +2075,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   width: 560px;
   height: 315px;
   margin: 40px auto;
-  overflow: hidden;
+  overflow: visible; 
   border-radius: 12px;
 }
 
@@ -2100,9 +2100,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   background: rgba(0, 0, 0, 0.4);
   border: none;
   color: var(--orange-yellow-crayola);
-  width: 42px;
-  height: 42px;
-  font-size: 22px;
+  width: 38px;
+  height: 38px;
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 50%;
@@ -2113,11 +2113,16 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .carousel-btn.prev {
-  left: -50px;
+  left: -16px;
 }
 
 .carousel-btn.next {
-  right: -50px;
+  right: -16px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateY(-50%) scale(1.05);
 }
 
 }
