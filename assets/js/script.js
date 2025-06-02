@@ -126,17 +126,16 @@ window.addEventListener("DOMContentLoaded", () => {
   const project = params.get("project");
 
   if (project) {
-    for (let i = 0; i < pages.length; i++) {
-      const isTarget = pages[i].dataset.page.toLowerCase() === project.toLowerCase();
-      pages[i].classList.toggle("active", isTarget);
-    }
+  pages.forEach(p => p.classList.remove("active"));
 
-    for (let i = 0; i < navigationLinks.length; i++) {
-      navigationLinks[i].classList.remove("active");
-    }
+  const targetPage = Array.from(pages).find(p => p.dataset.page.toLowerCase() === project.toLowerCase());
+  if (targetPage) targetPage.classList.add("active");
 
-    window.scrollTo(0, 0);
-  }
+  navigationLinks.forEach(link => link.classList.remove("active"));
+
+  window.scrollTo(0, 0);
+}
+
 });
 
 document.addEventListener('DOMContentLoaded', function () {
