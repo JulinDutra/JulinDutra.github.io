@@ -101,9 +101,20 @@ for (let i = 0; i < navigationLinks.length; i++) {
     const clickedPage = this.textContent.trim().toLowerCase();
 
     for (let j = 0; j < pages.length; j++) {
-      const isTarget = pages[j].dataset.page.toLowerCase() === clickedPage;
-      pages[j].classList.toggle("active", isTarget);
+    const page = pages[j];
+    const isStandardPage = ["about", "resume", "portfolio", "reviews", "contact"].includes(clickedPage);
+    const isTarget = page.dataset.page.toLowerCase() === clickedPage;
+
+    page.classList.toggle("active", isTarget);
+    }
+
+    for (let j = 0; j < navigationLinks.length; j++) {
+      const isTarget = navigationLinks[j].textContent.trim().toLowerCase() === clickedPage;
       navigationLinks[j].classList.toggle("active", isTarget);
+    }
+
+    if (window.location.search.includes("project=")) {
+      history.replaceState(null, "", window.location.pathname);
     }
 
     window.scrollTo(0, 0);
