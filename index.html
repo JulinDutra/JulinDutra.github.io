@@ -139,6 +139,13 @@
             </a>
           </li>
 
+          <li class="social-item">
+            <a href="https://www.backloggd.com/u/julionicacio/" class="social-link" target="_blank">
+              <img src="assets/icons/backloggd-icon.png" alt="Backloggd" class="social-img-icon">
+            </a>
+          </li>
+
+
         </ul>
 
       </div>
@@ -169,10 +176,6 @@
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
           </li>
 
           <li class="navbar-item">
@@ -699,47 +702,6 @@
       </article>
 
       <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-        <section id="blog-container" class="blog-posts"></section>
-
-          <script>
-          fetch("./assets/data/blog-posts.json")
-            .then(res => res.json())
-            .then(posts => {
-              const container = document.getElementById("blog-container");
-
-              posts.forEach(post => {
-                const wrapper = document.createElement("div");
-                wrapper.className = "blog-post-item";
-
-                let icon = "";
-                if (post.source === "linkedin") icon = `<ion-icon name="logo-linkedin"></ion-icon>`;
-                if (post.source === "backloggd") icon = `<ion-icon name="game-controller-outline"></ion-icon>`;
-
-                wrapper.innerHTML = `
-                  <a href="${post.link}" target="_blank">
-                    <div class="blog-meta">
-                      ${icon}
-                      <time datetime="${post.date}">${new Date(post.date).toLocaleDateString()}</time>
-                    </div>
-                    <h3 class="blog-item-title">${post.title}</h3>
-                    <p class="blog-text">${post.excerpt}</p>
-                  </a>
-                `;
-
-              container.appendChild(wrapper);
-            });
-          });
-        </script>
-      </article>
-
-      <!--
         - #CONTACT
       -->
 
@@ -810,6 +772,11 @@
             <li class="social-item">
               <a href="https://api.whatsapp.com/send?phone=55027998342363&text=Hello Julio!" class="social-link">
                 <ion-icon name="logo-whatsapp"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://www.backloggd.com/u/julionicacio/" class="social-link" target="_blank">
+                <img src="assets/icons/backloggd-icon.png" alt="Backloggd" class="social-img-icon">
               </a>
             </li>
           </ul>
