@@ -1156,6 +1156,58 @@ main {
   font-weight: var(--fw-300);
 }
 
+.project-name {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--orange-yellow-crayola);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: hsla(45, 100%, 72%, 0.08);
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--orange-yellow-crayola);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 6px hsla(45, 100%, 72%, 0.2);
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+  color: var(--white-2);
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.tech-list li {
+  background: hsla(45, 100%, 72%, 0.07);
+  border: 1px solid var(--orange-yellow-crayola);
+  border-radius: 10px;
+  padding: 4px 10px;
+  backdrop-filter: blur(3px);
+}
+
+@media (min-width: 600px) {
+  .project-name {
+    font-size: 32px;
+    padding: 12px 24px;
+  }
+  .tech-list {
+    font-size: var(--fs-6);
+  }
+  .tech-list li {
+    padding: 6px 12px;
+  }
+}
+
 /*-----------------------------------*\
   #BLOG
 \*-----------------------------------*/
