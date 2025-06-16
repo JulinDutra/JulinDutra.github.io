@@ -457,6 +457,42 @@ main {
   .contact-info-grid .contact-item {
     flex: 1 1 100%;
   }
+  .project-name {
+    font-size: 24px;
+    padding: 8px 16px;
+  }
+
+  .tech-list {
+    font-size: var(--fs-7);
+  }
+
+  .tech-list li {
+    padding: 4px 8px;
+  }
+
+  .project-img {
+    height: auto;
+  }
+
+  .project-img img,
+  .image-gallery img,
+  .image-inline img,
+  .carousel-track img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .carousel-container {
+    width: 100%;
+  }
+
+  .carousel-btn.prev { left: 10px; }
+  .carousel-btn.next { right: 10px; }
+
+  iframe {
+    width: 100% !important;
+    height: auto;
+  }
 }
 
 .social-list {
