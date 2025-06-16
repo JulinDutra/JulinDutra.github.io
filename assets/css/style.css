@@ -1489,7 +1489,35 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
+.carousel-container {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 40px auto;
+  overflow: hidden;
+  text-align: center;
+}
 
+.carousel-viewport {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.platform-tags {
+  flex-wrap: wrap;
+}
+
+@media (min-width: 600px) {
+  .project-name { font-size: 32px; padding: 12px 24px; }
+  .tech-list { font-size: var(--fs-6); }
+  .tech-list li { padding: 6px 12px; }
+}
 
 
 
