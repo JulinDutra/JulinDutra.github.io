@@ -137,6 +137,11 @@ span {
   display: block;
 }
 
+/* Ensure punctuation stays attached to links inside paragraphs */
+p a {
+  display: inline;
+}
+
 button {
   font: inherit;
   background: none;
