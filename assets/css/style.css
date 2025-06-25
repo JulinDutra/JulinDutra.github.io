@@ -2465,14 +2465,6 @@ textarea.form-input::-webkit-resizer {
     content: none;
   }
 
-  .nowrap {
-    white-space: nowrap;
-    display: inline;
-  }
-
-  .nowrap a {
-    display: inline;
-  }
 
   .tech-list {
     display: flex;
