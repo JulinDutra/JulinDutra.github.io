@@ -457,6 +457,11 @@ main {
   font-size: var(--fs-7);
 }
 
+.sidebar .contact-info :is(.contact-link, time, address) {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
 .contact-info address {
   font-style: normal;
 }
@@ -2297,13 +2302,6 @@ textarea.form-input::-webkit-resizer {
 
   .contacts-list {
     grid-template-columns: 1fr;
-  }
-
-  .contact-info :is(.contact-link) {
-    white-space: normal;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    line-height: 1.4;
   }
 
   .contact-info :is(.contact-link, time, address) {
