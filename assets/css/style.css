@@ -457,9 +457,9 @@ main {
   font-size: var(--fs-7);
 }
 
-.sidebar .contact-info :is(.contact-link, time, address) {
-  word-break: break-word;
-  overflow-wrap: break-word;
+.sidebar .contact-info .contact-link {
+  font-size: 12px;
+  white-space: nowrap;
 }
 
 .contact-info address {
