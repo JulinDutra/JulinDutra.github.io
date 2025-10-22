@@ -2300,9 +2300,10 @@ textarea.form-input::-webkit-resizer {
   }
 
   .contact-info :is(.contact-link) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    line-height: 1.4;
   }
 
   .contact-info :is(.contact-link, time, address) {
