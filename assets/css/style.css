@@ -2487,6 +2487,23 @@ textarea.form-input::-webkit-resizer {
     backdrop-filter: blur(3px);
   }
 
+  .tech-category {
+    margin-bottom: 24px;
+  }
+
+  .tech-category-title {
+    font-size: var(--fs-5);
+    font-weight: var(--fw-500);
+    color: var(--orange-yellow-crayola);
+    margin-bottom: 12px;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  .tech-category .tech-list {
+    margin-top: 0;
+  }
+
   .image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
